@@ -9,7 +9,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 */
 
 async function deleteMenu(id) {
-    const res = await fetch('http://127.0.0.1:8000/api/menu/${id}/', {
+    const res = await fetch(`http://127.0.0.1:8000/api/menu/${id}/`, {
         method: "DELETE",
     });
     if (!res.ok) {
@@ -126,7 +126,7 @@ export default function Page() {
                         id={item.id}
                         name={item.name}
                         price={item.price}
-                        onEdit={() => router.push('/update/${item.id}')}
+                        onEdit={() => router.push(`/update/${item.id}`)}
                         onDelete={handleDelete}
                     />
                 ))

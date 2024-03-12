@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 /**
 * Sends a POST request to create a new menu item.
-* @oaram {Object} data The menu item data to be sent.
+* @param {Object} data The menu item data to be sent.
 */
 
 async function createMenu(data) {
